@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Africa VC Pulse — Q1 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #3d1f0d;         /* deep rich kola nut brown — replaces black */
+    --paper: #fdf6ed;       /* warm ivory / bleached parchment */
+    --gold: #e0901a;        /* deep golden kente — richer amber */
+    --gold-light: #f5d08a;  /* muted kente highlight */
+    --rust: #b94040;        /* ochre-red masai */
+    --forest: #2d6e45;      /* baobab savanna green */
+    --sky: #2a5a7c;         /* saharan sky blue */
+    --sand: #eedfc4;        /* sahara sand */
+    --accent: #c9501a;      /* terracotta / kente orange */
+    --muted: #7a5a3a;       /* warm sienna brown */
+    --header-bg: #6b2d0f;   /* deep terracotta — replaces black header */
+    --header-bg2: #8b3a14;  /* lighter terracotta gradient */
+    --header-dot: rgba(224,144,26,0.22);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    overflow-x: hidden;
+  }
+
+  /* ---- HEADER ---- */
+  .masthead {
+    background: linear-gradient(135deg, var(--header-bg) 0%, var(--header-bg2) 50%, #a0431a 100%);
+    color: var(--paper);
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .masthead-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 40px 40px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .masthead-grid {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 40px;
+    align-items: start;
+  }
+
+  .masthead-bg {
+    position: absolute;
+    top: 0; right: 0;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent 30%, rgba(224,144,26,0.15) 100%);
+    pointer-events: none;
+  }
+
+  .masthead-bg-dots {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: radial-gradient(circle, var(--header-dot) 1px, transparent 1px);
+    background-size: 28px 28px;
+    pointer-events: none;
+  }
+
+  .badge {
+    display: inline-block;
+    background: var(--gold);
+    color: #3d1f0d;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 4px 10px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 5vw, 64px);
+    font-weight: 900;
+    line-height: 1.05;
+    margin-bottom: 16px;
+    color: var(--paper);
+  }
+
+  .headline em {
+    font-style: normal;
+    color: var(--gold);
+  }
+
+  .subhead {
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(245,240,232,0.7);
+    max-width: 520px;
+    margin-bottom: 32px;
+  }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .hero-stat {
+    padding: 16px 20px;
+    background: rgba(255,255,255,0.07);
+  }
+
+  .hero-stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--gold);
+    display: block;
+  }
+
+  .hero-stat-label {
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(245,240,232,0.5);
+    margin-top: 2px;
+    display: block;
+  }
+
+  .side-panel {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(224,144,26,0.4);
+    padding: 20px;
+  }
+
+  .side-panel h3 {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+    padding-bottom: 8px;
+  }
+
+  .key-finding {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 14px;
+    align-items: flex-start;
+  }
+
+  .key-finding-icon {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    background: rgba(224,144,26,0.2);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+  }
+
+  .key-finding-text {
+    font-size: 12px;
+    line-height: 1.5;
+    color: rgba(245,240,232,0.8);
+  }
+
+  .key-finding-text strong {
+    color: var(--gold);
+    display: block;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+  }
+
+  /* ---- LAYOUT ---- */
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+
+  .section {
+    padding: 56px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+
+  .section-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--ink);
+  }
+
+  .section-desc {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.6;
+    max-width: 600px;
+    margin-bottom: 32px;
+  }
+
+  /* ---- TABS ---- */
+  .tabs {
+    display: flex;
+    gap: 0;
+    margin-bottom: 32px;
+    border-bottom: 2px solid var(--sand);
+  }
+
+  .tab-btn {
+    padding: 10px 20px;
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--muted);
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    transition: all 0.2s;
+  }
+
+  .tab-btn.active {
+    color: var(--ink);
+    border-bottom-color: var(--gold);
+    background: rgba(201,168,76,0.06);
+  }
+
+  .tab-btn:hover:not(.active) { color: var(--ink); }
+
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  /* ---- DEAL TABLE ---- */
+  .deal-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .deal-table thead tr {
+    border-bottom: 2px solid var(--accent);
+  }
+
+  .deal-table thead th {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 12px;
+    text-align: left;
+    color: var(--muted);
+    background: none;
+  }
+
+  .deal-table tbody tr {
+    border-bottom: 1px solid var(--sand);
+    transition: background 0.15s;
+    cursor: pointer;
+  }
+
+  .deal-table tbody tr:hover { background: rgba(201,168,76,0.06); }
+
+  .deal-table td {
+    padding: 14px 12px;
+    font-size: 13px;
+    vertical-align: top;
+  }
+
+  .company-cell {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .company-logo {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    border-radius: 4px;
+    background: var(--header-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: -0.5px;
+  }
+
+  .company-name {
+    font-weight: 600;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .company-desc {
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.4;
+    max-width: 260px;
+  }
+
+  .stage-badge {
+    display: inline-block;
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 3px 8px;
+    border-radius: 2px;
+    text-transform: uppercase;
+  }
+
+  .stage-pre-seed { background: rgba(192,57,43,0.12); color: var(--rust); border: 1px solid rgba(192,57,43,0.3); }
+  .stage-seed { background: rgba(26,92,58,0.12); color: var(--forest); border: 1px solid rgba(26,92,58,0.3); }
+  .stage-series-a { background: rgba(26,60,92,0.12); color: var(--sky); border: 1px solid rgba(26,60,92,0.3); }
+  .stage-pre-series-c { background: rgba(212,81,42,0.12); color: var(--accent); border: 1px solid rgba(212,81,42,0.3); }
+
+  .amount-cell {
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+
+  .amount-type {
+    font-size: 9px;
+    color: var(--muted);
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 2px;
+  }
+
+  .country-flag {
+    font-size: 16px;
+    margin-right: 4px;
+  }
+
+  .sector-tag {
+    display: inline-block;
+    font-size: 10px;
+    padding: 2px 8px;
+    background: var(--sand);
+    color: var(--muted);
+    border-radius: 20px;
+    margin-top: 4px;
+  }
+
+  /* ---- CHARTS ---- */
+  .charts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .chart-card {
+    background: white;
+    border: 1px solid var(--sand);
+    padding: 28px;
+  }
+
+  .chart-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .chart-subtitle {
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+  }
+
+  /* Bar chart */
+  .bar-chart { display: flex; flex-direction: column; gap: 12px; }
+
+  .bar-row {
+    display: grid;
+    grid-template-columns: 110px 1fr 70px;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .bar-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--ink);
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .bar-track {
+    height: 24px;
+    background: var(--sand);
+    border-radius: 1px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .bar-fill {
+    height: 100%;
+    border-radius: 1px;
+    transition: width 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    width: 0;
+    position: relative;
+  }
+
+  .bar-value {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--muted);
+  }
+
+  /* Donut chart */
+  .donut-container {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .donut-svg { flex-shrink: 0; }
+
+  .donut-legend { flex: 1; display: flex; flex-direction: column; gap: 10px; }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  .legend-name { flex: 1; color: var(--ink); }
+  .legend-pct { font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; color: var(--muted); }
+
+  /* Regional map card */
+  .region-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .region-card {
+    border: 1px solid var(--sand);
+    padding: 16px;
+    background: white;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .region-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 100%;
+  }
+
+  .region-card.north::before { background: var(--rust); }
+  .region-card.west::before { background: var(--forest); }
+  .region-card.east::before { background: var(--sky); }
+  .region-card.south::before { background: var(--gold); }
+
+  .region-name {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+
+  .region-amount {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .region-deals { font-size: 12px; color: var(--muted); margin-bottom: 12px; }
+
+  .region-countries { display: flex; flex-wrap: wrap; gap: 6px; }
+
+  .region-country {
+    font-size: 11px;
+    padding: 2px 8px;
+    background: var(--sand);
+    color: var(--ink);
+  }
+
+  /* ---- INVESTOR TABLE ---- */
+  .investor-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .investor-card {
+    background: white;
+    border: 1px solid var(--sand);
+    padding: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .investor-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  }
+
+  .investor-rank {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--gold);
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+  }
+
+  .investor-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    line-height: 1.2;
+  }
+
+  .investor-type {
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .investor-deals {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .deal-chip {
+    font-size: 10px;
+    padding: 3px 8px;
+    background: var(--sand);
+    color: var(--ink);
+    border-radius: 20px;
+  }
+
+  /* ---- TREND CHART ---- */
+  .trend-row {
+    display: flex;
+    gap: 4px;
+    align-items: flex-end;
+    height: 80px;
+    margin-top: 16px;
+  }
+
+  .trend-bar {
+    flex: 1;
+    border-radius: 2px 2px 0 0;
+    transition: height 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  /* ---- INSIGHT BOX ---- */
+  .insight-box {
+    background: linear-gradient(135deg, #5a2008 0%, #7a300f 100%);
+    color: var(--paper);
+    padding: 28px 32px;
+    margin: 40px 0;
+    position: relative;
+    overflow: hidden;
+    border-left: 4px solid var(--gold);
+  }
+
+  .insight-box::before {
+    content: '⚡';
+    position: absolute;
+    right: 32px;
+    top: 28px;
+    font-size: 48px;
+    opacity: 0.1;
+  }
+
+  .insight-box-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+
+  .insight-box-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.55;
+    color: var(--paper);
+    max-width: 800px;
+  }
+
+  .insight-box-text strong {
+    color: var(--gold);
+    font-weight: 700;
+  }
+
+  /* ---- FOOTER ---- */
+  .footer {
+    background: linear-gradient(135deg, #4a1a06 0%, #6b2d0f 100%);
+    color: rgba(253,246,237,0.55);
+    padding: 32px 40px;
+    font-size: 11px;
+    line-height: 1.7;
+  }
+
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+
+  /* ---- SEARCH / FILTER ---- */
+  .filter-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .search-input {
+    padding: 8px 14px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    border: 1px solid var(--sand);
+    background: white;
+    color: var(--ink);
+    width: 240px;
+    outline: none;
+  }
+
+  .search-input:focus { border-color: var(--gold); }
+
+  .filter-select {
+    padding: 8px 12px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    border: 1px solid var(--sand);
+    background: white;
+    color: var(--ink);
+    outline: none;
+    cursor: pointer;
+  }
+
+  .filter-select:focus { border-color: var(--gold); }
+
+  .result-count {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 1px;
+    margin-left: auto;
+  }
+
+  /* ---- SPARKLINE ---- */
+  .sparkline-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--sand);
+    border: 1px solid var(--sand);
+    margin-bottom: 32px;
+  }
+
+  .sparkline-cell {
+    background: white;
+    padding: 20px 24px;
+    text-align: center;
+  }
+
+  .sparkline-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--ink);
+    display: block;
+  }
+
+  .sparkline-label {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.5px;
+    margin-top: 4px;
+    display: block;
+  }
+
+  .sparkline-delta {
+    display: inline-block;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    padding: 2px 7px;
+    margin-top: 6px;
+    border-radius: 20px;
+  }
+
+  .delta-up { background: rgba(26,92,58,0.12); color: var(--forest); }
+  .delta-down { background: rgba(192,57,43,0.12); color: var(--rust); }
+
+  /* ---- ANIMATIONS ---- */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-in {
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards;
+  }
+
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.2s; }
+  .delay-3 { animation-delay: 0.3s; }
+  .delay-4 { animation-delay: 0.4s; }
+
+  @media (max-width: 900px) {
+    .masthead-grid { grid-template-columns: 1fr; }
+    .charts-grid { grid-template-columns: 1fr; }
+    .investor-grid { grid-template-columns: repeat(2, 1fr); }
+    .region-grid { grid-template-columns: 1fr 1fr; }
+    .hero-stats { grid-template-columns: 1fr 1fr; }
+    .container { padding: 0 20px; }
+    .masthead-inner { padding: 32px 20px 28px; }
+  }
+
+  @media (max-width: 600px) {
+    .investor-grid { grid-template-columns: 1fr; }
+    .hero-stats { grid-template-columns: 1fr; }
+    .region-grid { grid-template-columns: 1fr; }
+    .sparkline-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<header class="masthead">
+  <div class="masthead-bg-dots"></div>
+  <div class="masthead-bg"></div>
+  <div class="masthead-inner">
+    <div class="masthead-grid">
+      <div class="animate-in">
+        <span class="badge">Africa VC Pulse · Jan–Mar 2026</span>
+        <h1 class="headline">Where the <em>Money</em><br>Is Flowing</h1>
+        <p class="subhead">A data-driven look at every disclosed startup funding round across Africa — from pre-seed to Series A — in the first 73 days of 2026.</p>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-num">$575M+</span>
+            <span class="hero-stat-label">Total Disclosed (Jan–Feb)</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">58+</span>
+            <span class="hero-stat-label">Deals Tracked</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">+11%</span>
+            <span class="hero-stat-label">YoY Capital Growth</span>
+          </div>
+        </div>
+      </div>
+      <div class="side-panel animate-in delay-2">
+        <h3>Key Findings</h3>
+        <div class="key-finding">
+          <div class="key-finding-icon">🔋</div>
+          <div class="key-finding-text">
+            <strong>E-Mobility Leads</strong>
+            E-mobility became the most capitalised theme — overtaking fintech in Feb 2026.
+          </div>
+        </div>
+        <div class="key-finding">
+          <div class="key-finding-icon">🏦</div>
+          <div class="key-finding-text">
+            <strong>Debt Surges 165%</strong>
+            Debt capital rose from 24% to 57% of all funding — a structural shift away from pure equity VC.
+          </div>
+        </div>
+        <div class="key-finding">
+          <div class="key-finding-icon">📉</div>
+          <div class="key-finding-text">
+            <strong>Series A Falls 69%</strong>
+            Only 4 Series A rounds vs 13 a year earlier. Zero Series B rounds recorded.
+          </div>
+        </div>
+        <div class="key-finding">
+          <div class="key-finding-icon">🌍</div>
+          <div class="key-finding-text">
+            <strong>Egypt Leads North</strong>
+            Egypt, Kenya, Nigeria & South Africa captured ~80% of all capital deployed.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<main>
+
+  <!-- HEADLINE NUMBERS -->
+  <section class="section">
+    <div class="container">
+      <div class="sparkline-row animate-in">
+        <div class="sparkline-cell">
+          <span class="sparkline-num">$174M</span>
+          <span class="sparkline-label">January 2026 Funding</span>
+          <span class="sparkline-delta delta-down">▼ vs $276M Jan 2025</span>
+        </div>
+        <div class="sparkline-cell">
+          <span class="sparkline-num">$272M</span>
+          <span class="sparkline-label">February 2026 Funding</span>
+          <span class="sparkline-delta delta-up">▲ +128% vs Feb 2025</span>
+        </div>
+        <div class="sparkline-cell">
+          <span class="sparkline-num">57%</span>
+          <span class="sparkline-label">Share of Capital: Debt</span>
+          <span class="sparkline-delta delta-down">Was 24% in Jan–Feb 2025</span>
+        </div>
+      </div>
+
+      <div class="insight-box animate-in delay-1">
+        <div class="insight-box-label">Analyst Take</div>
+        <p class="insight-box-text">Africa's funding story in early 2026 is one of <strong>more money, less venture</strong>. Total capital rose 11% year-on-year to $487M, but equity funding fell 37% while debt soared 165%. The era of VC-led expansion is giving way to a more selective, asset-backed, DFI-driven model — with <strong>e-mobility, energy, and logistics</strong> replacing fintech as the continent's most bankable bets.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEAL TRACKER -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">Deal Tracker</div>
+      <h2 class="section-title">Every Notable Round, Jan 1–Mar 14, 2026</h2>
+      <p class="section-desc">Pre-seed, seed, and Series A/B equity rounds across the African continent. Sourced from TechCabal Insights, Disrupt Africa, Africa: The Big Deal, and primary reports.</p>
+
+      <div class="filter-row">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search company, investor, country…" oninput="filterDeals()">
+        <select class="filter-select" id="stageFilter" onchange="filterDeals()">
+          <option value="">All Stages</option>
+          <option value="pre-seed">Pre-Seed</option>
+          <option value="seed">Seed</option>
+          <option value="series-a">Series A</option>
+          <option value="pre-series-c">Pre-Series C</option>
+        </select>
+        <select class="filter-select" id="sectorFilter" onchange="filterDeals()">
+          <option value="">All Sectors</option>
+          <option value="Fintech">Fintech</option>
+          <option value="E-Mobility">E-Mobility</option>
+          <option value="Energy">Energy</option>
+          <option value="Logistics">Logistics</option>
+          <option value="Agritech">Agritech</option>
+          <option value="Proptech">Proptech</option>
+          <option value="Defence Tech">Defence Tech</option>
+          <option value="Edtech">Edtech</option>
+        </select>
+        <span class="result-count" id="resultCount">Showing all deals</span>
+      </div>
+
+      <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab('all')">All Deals</button>
+        <button class="tab-btn" onclick="switchTab('seed-pre')">Seed & Pre-Seed</button>
+        <button class="tab-btn" onclick="switchTab('series')">Series A/B</button>
+      </div>
+
+      <table class="deal-table" id="dealTable">
+        <thead>
+          <tr>
+            <th style="width:30%">Company</th>
+            <th>Stage</th>
+            <th>Amount</th>
+            <th>Country</th>
+            <th>Sector</th>
+            <th>Lead Investor</th>
+          </tr>
+        </thead>
+        <tbody id="dealBody">
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- CHARTS -->
+  <section class="section" style="background: rgba(107,42,15,0.04);">
+    <div class="container">
+      <div class="section-label">Capital Flow Analysis</div>
+      <h2 class="section-title">Where the Money Is Going</h2>
+      <p class="section-desc">Funding distribution by sector, stage and geography across Q1 2026.</p>
+
+      <div class="charts-grid">
+        <!-- Sector Bar Chart -->
+        <div class="chart-card animate-in">
+          <div class="chart-title">Funding by Sector</div>
+          <div class="chart-subtitle">Total disclosed capital · Jan–Feb 2026</div>
+          <div class="bar-chart" id="sectorChart"></div>
+        </div>
+
+        <!-- Stage Donut -->
+        <div class="chart-card animate-in delay-1">
+          <div class="chart-title">Equity vs Debt Breakdown</div>
+          <div class="chart-subtitle">Share of total capital deployed · Feb 2026</div>
+          <div class="donut-container">
+            <svg class="donut-svg" width="140" height="140" viewBox="0 0 140 140" id="donutSvg"></svg>
+            <div class="donut-legend" id="donutLegend"></div>
+          </div>
+        </div>
+
+        <!-- Regional -->
+        <div class="chart-card animate-in delay-2" style="grid-column: 1 / -1;">
+          <div class="chart-title">Regional Breakdown — February 2026</div>
+          <div class="chart-subtitle">Funding concentration by African sub-region</div>
+          <div class="region-grid" id="regionGrid"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOP INVESTORS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">Investor Landscape</div>
+      <h2 class="section-title">Active Check-Writers in 2026</h2>
+      <p class="section-desc">The investors showing up most consistently in African startup rounds this quarter — from DFIs to pan-African VCs.</p>
+
+      <div class="investor-grid" id="investorGrid"></div>
+    </div>
+  </section>
+
+  <!-- CLOSING INSIGHT -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">Outlook</div>
+      <h2 class="section-title">What This Means for Founders</h2>
+      <div class="charts-grid" style="gap: 24px;">
+        <div class="chart-card">
+          <div class="chart-title">🟢 What's Working</div>
+          <div class="chart-subtitle">Sectors attracting capital in 2026</div>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 8px;">
+            <li style="font-size:13px; padding: 10px 12px; background: rgba(26,92,58,0.06); border-left: 3px solid var(--forest);">⚡ <strong>E-Mobility</strong> — $107M+ in Feb alone; battery-swap infrastructure is the hot bet</li>
+            <li style="font-size:13px; padding: 10px 12px; background: rgba(26,92,58,0.06); border-left: 3px solid var(--forest);">☀️ <strong>Clean Energy</strong> — DFIs and impact funds pouring in; SolarAfrica raised $94M</li>
+            <li style="font-size:13px; padding: 10px 12px; background: rgba(26,92,58,0.06); border-left: 3px solid var(--forest);">🛒 <strong>E-Commerce Infra</strong> — Fulfilment & logistics tech (Flextock $12.6M Series A)</li>
+            <li style="font-size:13px; padding: 10px 12px; background: rgba(26,92,58,0.06); border-left: 3px solid var(--forest);">🔒 <strong>Fintech Infrastructure</strong> — Fraud prevention (Orca $2.35M) and payment rails</li>
+          </ul>
+        </div>
+        <div class="chart-card">
+          <div class="chart-title">🔴 What's Challenged</div>
+          <div class="chart-subtitle">Headwinds in the current environment</div>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 8px;">
+            <li style="font-size:13px; padding: 10px 12px; background: rgba(192,57,43,0.06); border-left: 3px solid var(--rust);">📉 <strong>Series A + B rounds</strong> — dropped 69%; DFI-led deals now dominate growth stage</li>
+            <li style="font-size:13px; padding: 10px 12px; background: rgba(192,57,43,0.06); border-left: 3px solid var(--rust);">🌾 <strong>Agritech</strong> — only $200K raised in Jan; cautious investor sentiment persists</li>
+            <li style="font-size:13px; padding: 10px 12px; background: rgba(192,57,43,0.06); border-left: 3px solid var(--rust);">💸 <strong>Pure equity VC</strong> — fell 37% YoY as debt financing reshapes capital stacks</li>
+            <li style="font-size:13px; padding: 10px 12px; background: rgba(192,57,43,0.06); border-left: 3px solid var(--rust);">🌍 <strong>Emerging hubs</strong> — Rwanda, Senegal, Tanzania still capturing &lt;3% of funding</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Africa VC Pulse</div>
+      <div>Q1 2026 Edition · Published March 14, 2026</div>
+      <div style="margin-top: 4px;">Data: TechCabal Insights · Africa: The Big Deal · Disrupt Africa · Innovation Village · Launch Base Africa</div>
+    </div>
+    <div style="text-align: right; max-width: 320px;">
+      <div>All amounts in USD. Data covers disclosed deals of $100K+ in equity, debt, and grants across the African continent from January 1 to March 14, 2026. Methodology note: figures may differ by source due to timing of disclosure and inclusion criteria.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// DATA
+const deals = [
+  // SERIES A
+  { company: "Zeno", desc: "Full-stack electric motorcycle manufacturer deploying battery-swap networks across East Africa.", stage: "series-a", stageLabel: "Series A", amount: "$25M", amountType: "Equity + Debt", country: "🇰🇪 Kenya", sector: "E-Mobility", investor: "Congruent Ventures", month: "Mar" },
+  { company: "Yakeey", desc: "AI-powered managed marketplace digitising property transactions in Morocco.", stage: "series-a", stageLabel: "Series A", amount: "$15M", amountType: "Equity", country: "🇲🇦 Morocco", sector: "Proptech", investor: "Enza Capital / IFC", month: "Jan" },
+  { company: "Flextock", desc: "E-commerce fulfilment and cross-border enablement platform for online merchants.", stage: "series-a", stageLabel: "Series A", amount: "$12.6M", amountType: "Equity", country: "🇪🇬 Egypt", sector: "Logistics", investor: "TLcom Capital", month: "Feb" },
+  { company: "Arc Ride", desc: "Electric motorcycle mobility platform offering ride-hailing and lease-to-own in East Africa.", stage: "series-a", stageLabel: "Series A", amount: "Undisclosed", amountType: "Equity", country: "🇰🇪 Kenya", sector: "E-Mobility", investor: "BII / IFC", month: "Feb" },
+  // SEED
+  { company: "WafR", desc: "Turning Morocco's 20,000 corner stores into digital financial services access points.", stage: "seed", stageLabel: "Seed", amount: "$4M", amountType: "Equity", country: "🇲🇦 Morocco", sector: "Fintech", investor: "LoftyInc Capital", month: "Feb" },
+  { company: "Orca Fraud", desc: "Real-time fraud intelligence platform built for African payment networks and mobile money.", stage: "seed", stageLabel: "Seed", amount: "$2.35M", amountType: "Equity", country: "🇿🇦 South Africa", sector: "Fintech", investor: "Norrsken22", month: "Mar" },
+  { company: "NjiaPay", desc: "Payment orchestration layer helping African businesses route transactions across multiple PSPs.", stage: "seed", stageLabel: "Seed", amount: "$2.1M", amountType: "Equity", country: "🇿🇦 South Africa", sector: "Fintech", investor: "Newion Partners", month: "Mar" },
+  { company: "Cauridor", desc: "Stablecoin-native cross-border payments rail enabling instant USD-settled corridors in Africa.", stage: "seed", stageLabel: "Seed", amount: "$3.5M", amountType: "Equity", country: "🇨🇮 Côte d'Ivoire", sector: "Fintech", investor: "EWOR / DCG / a16z scouts", month: "Jan" },
+  { company: "Lovegrass Ethiopia", desc: "Teff producer scaling sustainable agri-food production and export supply chains.", stage: "seed", stageLabel: "Seed", amount: "$5M", amountType: "Equity", country: "🇪🇹 Ethiopia", sector: "Agritech", investor: "British International Investment", month: "Feb" },
+  { company: "Weego", desc: "Multimodal transport platform unifying buses, trams, and taxis into a single real-time interface.", stage: "seed", stageLabel: "Seed", amount: "$1.1M", amountType: "Equity", country: "🇲🇦 Morocco", sector: "Mobility", investor: "Azur Innovation Fund", month: "Mar" },
+  { company: "Axmed", desc: "Health supply chain startup improving medicine procurement and distribution for clinics in Kenya.", stage: "seed", stageLabel: "Seed", amount: "Undisclosed", amountType: "Equity", country: "🇰🇪 Kenya", sector: "Healthtech", investor: "Undisclosed", month: "Feb" },
+  // PRE-SEED / FIRST ROUND
+  { company: "Rana Energy", desc: "AI-driven Clean Energy-as-a-Service via a Virtual Solar Network for commercial customers.", stage: "pre-seed", stageLabel: "Pre-Seed", amount: "$3M", amountType: "Equity + Debt", country: "🇳🇬 Nigeria", sector: "Energy", investor: "Techstars / EchoVC", month: "Jan" },
+  // LARGE ROUNDS (pre-series C / growth included for completeness)
+  { company: "GoCab", desc: "Drive-to-own mobility financing startup helping gig workers own their vehicles across Africa.", stage: "series-a", stageLabel: "Series A (Equity)", amount: "$45M", amountType: "Equity + Debt", country: "🇨🇮 Côte d'Ivoire", sector: "E-Mobility", investor: "E3 Capital / JANNGO Capital", month: "Feb" },
+  { company: "Breadfast", desc: "Online grocery and quick-commerce platform scaling distribution across Egypt and Africa.", stage: "pre-series-c", stageLabel: "Pre-Series C", amount: "$50M", amountType: "Equity", country: "🇪🇬 Egypt", sector: "E-Commerce", investor: "Novastar Ventures", month: "Feb" },
+  { company: "Terra Industries", desc: "Defence-tech startup building advanced manufacturing and industrial infrastructure in Nigeria.", stage: "series-a", stageLabel: "Series A+", amount: "$33M+", amountType: "Equity", country: "🇳🇬 Nigeria", sector: "Defence Tech", investor: "Lux Capital / 8VC", month: "Jan-Feb" },
+  { company: "NowPay", desc: "Earned wage access and payroll fintech enabling on-demand salary advances for Egyptian workers.", stage: "series-a", stageLabel: "Series A", amount: "$20M", amountType: "Debt", country: "🇪🇬 Egypt", sector: "Fintech", investor: "Undisclosed", month: "Jan" },
+  { company: "MAX", desc: "Mobility financing startup enabling motorbike ownership and fleet electrification across Nigeria.", stage: "series-a", stageLabel: "Series A+", amount: "$24M", amountType: "Equity + Debt", country: "🇳🇬 Nigeria", sector: "E-Mobility", investor: "IFC / Mirova", month: "Jan" },
+  { company: "Lula", desc: "SME fintech lender offering working capital to South African micro and small businesses.", stage: "series-a", stageLabel: "Series A", amount: "$21M", amountType: "Debt", country: "🇿🇦 South Africa", sector: "Fintech", investor: "FMO", month: "Feb" },
+];
+
+const investors = [
+  { rank: "01", name: "Afreximbank", type: "Development Finance", deals: ["Spiro $57M", "GoCab (co)"], badge: "DFI" },
+  { rank: "02", name: "IFC", type: "Development Finance", deals: ["MAX", "Arc Ride", "Yakeey"], badge: "DFI" },
+  { rank: "03", name: "Lux Capital", type: "VC · Silicon Valley", deals: ["Terra Industries"], badge: "VC" },
+  { rank: "04", name: "Congruent Ventures", type: "Climate VC", deals: ["Zeno $25M lead"], badge: "VC" },
+  { rank: "05", name: "Norrsken22", type: "Pan-African VC", deals: ["Orca Fraud"], badge: "VC" },
+  { rank: "06", name: "LoftyInc Capital", type: "Pan-African VC", deals: ["WafR $4M co-lead"], badge: "VC" },
+  { rank: "07", name: "Novastar Ventures", type: "Impact VC", deals: ["Breadfast $50M lead"], badge: "VC" },
+  { rank: "08", name: "BII", type: "Development Finance", deals: ["Arc Ride", "Lovegrass"], badge: "DFI" },
+  { rank: "09", name: "TLcom Capital", type: "Pan-African VC", deals: ["Flextock $12.6M lead"], badge: "VC" },
+  { rank: "10", name: "JANNGO Capital", type: "Pan-African VC", deals: ["GoCab $45M co-lead"], badge: "VC" },
+  { rank: "11", name: "8VC", type: "VC · Silicon Valley", deals: ["Terra Industries"], badge: "VC" },
+  { rank: "12", name: "Future Africa", type: "Nigerian VC", deals: ["Cleantech (SA)", "E-Mobility (TZ)"], badge: "VC" },
+];
+
+const sectors = [
+  { name: "E-Mobility", amount: 201, color: "#1a5c3a" },
+  { name: "Fintech", amount: 186, color: "#c9a84c" },
+  { name: "Energy", amount: 97, color: "#d4512a" },
+  { name: "E-Commerce", amount: 63, color: "#1a3c5c" },
+  { name: "Defence Tech", amount: 33, color: "#6b6050" },
+  { name: "Agritech", amount: 11, color: "#c0392b" },
+  { name: "Proptech", amount: 15, color: "#7d5a3c" },
+  { name: "Edtech", amount: 22, color: "#3a6b5c" },
+];
+
+const donutData = [
+  { label: "Debt Capital", pct: 57, color: "#c0392b" },
+  { label: "Equity Capital", pct: 43, color: "#1a5c3a" },
+];
+
+const regions = [
+  { name: "North Africa", cls: "north", amount: "$131M", deals: "12 deals", countries: ["Egypt", "Morocco"] },
+  { name: "West Africa", cls: "west", amount: "$103M", deals: "14 deals", countries: ["Nigeria", "Côte d'Ivoire", "Ghana"] },
+  { name: "East Africa", cls: "east", amount: "$73M", deals: "10 deals", countries: ["Kenya", "Ethiopia", "Tanzania"] },
+  { name: "Southern Africa", cls: "south", amount: "$128M", deals: "9 deals", countries: ["South Africa"] },
+];
+
+// RENDER DEALS
+function getInitials(name) {
+  return name.split(' ').map(w => w[0]).join('').slice(0,2).toUpperCase();
+}
+
+function renderDeals(data) {
+  const tbody = document.getElementById('dealBody');
+  tbody.innerHTML = '';
+  data.forEach(d => {
+    const tr = document.createElement('tr');
+    tr.dataset.stage = d.stage;
+    tr.dataset.sector = d.sector;
+    tr.innerHTML = `
+      <td>
+        <div class="company-cell">
+          <div class="company-logo">${getInitials(d.company)}</div>
+          <div>
+            <span class="company-name">${d.company}</span>
+            <span class="company-desc">${d.desc}</span>
+          </div>
+        </div>
+      </td>
+      <td><span class="stage-badge stage-${d.stage}">${d.stageLabel}</span></td>
+      <td>
+        <span class="amount-cell">${d.amount}</span>
+        <span class="amount-type">${d.amountType}</span>
+      </td>
+      <td style="font-size:13px; white-space:nowrap;">${d.country}</td>
+      <td><span class="sector-tag">${d.sector}</span></td>
+      <td style="font-size:12px; color: var(--muted);">${d.investor}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+  document.getElementById('resultCount').textContent = `Showing ${data.length} deal${data.length !== 1 ? 's' : ''}`;
+}
+
+renderDeals(deals);
+
+// FILTER
+function filterDeals() {
+  const search = document.getElementById('searchInput').value.toLowerCase();
+  const stage = document.getElementById('stageFilter').value;
+  const sector = document.getElementById('sectorFilter').value;
+
+  const filtered = deals.filter(d => {
+    const matchSearch = !search ||
+      d.company.toLowerCase().includes(search) ||
+      d.investor.toLowerCase().includes(search) ||
+      d.country.toLowerCase().includes(search) ||
+      d.desc.toLowerCase().includes(search);
+    const matchStage = !stage || d.stage === stage;
+    const matchSector = !sector || d.sector === sector;
+    return matchSearch && matchStage && matchSector;
+  });
+  renderDeals(filtered);
+}
+
+// TABS
+function switchTab(tab) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+
+  if (tab === 'all') {
+    document.getElementById('stageFilter').value = '';
+  } else if (tab === 'seed-pre') {
+    document.getElementById('stageFilter').value = '';
+    // Filter to seed/pre-seed only
+    const filtered = deals.filter(d => d.stage === 'seed' || d.stage === 'pre-seed');
+    renderDeals(filtered);
+    return;
+  } else if (tab === 'series') {
+    const filtered = deals.filter(d => d.stage === 'series-a' || d.stage === 'pre-series-c');
+    renderDeals(filtered);
+    return;
+  }
+  filterDeals();
+}
+
+// SECTOR BAR CHART
+function renderSectorChart() {
+  const max = Math.max(...sectors.map(s => s.amount));
+  const container = document.getElementById('sectorChart');
+  container.innerHTML = '';
+  sectors.forEach(s => {
+    const pct = (s.amount / max) * 100;
+    const row = document.createElement('div');
+    row.className = 'bar-row';
+    row.innerHTML = `
+      <div class="bar-label" title="${s.name}">${s.name}</div>
+      <div class="bar-track">
+        <div class="bar-fill" data-width="${pct}" style="background: ${s.color}; width: 0%;"></div>
+      </div>
+      <div class="bar-value">$${s.amount}M</div>
+    `;
+    container.appendChild(row);
+  });
+  setTimeout(() => {
+    document.querySelectorAll('.bar-fill').forEach(el => {
+      el.style.width = el.dataset.width + '%';
+    });
+  }, 300);
+}
+renderSectorChart();
+
+// DONUT
+function renderDonut() {
+  const svg = document.getElementById('donutSvg');
+  const legend = document.getElementById('donutLegend');
+  const r = 50, cx = 70, cy = 70, strokeW = 22;
+  const circ = 2 * Math.PI * r;
+
+  let offset = 0;
+  let svgContent = `<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="#e8dcc8" stroke-width="${strokeW}"/>`;
+
+  donutData.forEach(d => {
+    const dash = (d.pct / 100) * circ;
+    const gap = circ - dash;
+    svgContent += `<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="${d.color}" stroke-width="${strokeW}" stroke-dasharray="${dash} ${gap}" stroke-dashoffset="${-offset}" style="transform-origin: ${cx}px ${cy}px; transform: rotate(-90deg); transition: stroke-dasharray 1s ease;" />`;
+    offset += dash;
+  });
+
+  // Center text
+  svgContent += `<text x="${cx}" y="${cy - 6}" text-anchor="middle" font-family="Playfair Display,serif" font-size="18" font-weight="700" fill="#0d0d0d">57%</text>`;
+  svgContent += `<text x="${cx}" y="${cy + 12}" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6b6050" letter-spacing="1">DEBT</text>`;
+
+  svg.innerHTML = svgContent;
+
+  legend.innerHTML = '';
+  donutData.forEach(d => {
+    const item = document.createElement('div');
+    item.className = 'legend-item';
+    item.innerHTML = `<div class="legend-dot" style="background:${d.color}"></div><span class="legend-name">${d.label}</span><span class="legend-pct">${d.pct}%</span>`;
+    legend.appendChild(item);
+  });
+
+  const eq = document.createElement('div');
+  eq.style.cssText = 'font-size: 11px; color: var(--muted); line-height: 1.5; margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--sand);';
+  eq.textContent = 'In Feb 2026, debt surpassed equity for the first time — a 165% YoY increase in debt financing.';
+  legend.appendChild(eq);
+}
+renderDonut();
+
+// REGIONS
+function renderRegions() {
+  const grid = document.getElementById('regionGrid');
+  regions.forEach(r => {
+    const card = document.createElement('div');
+    card.className = `region-card ${r.cls}`;
+    card.innerHTML = `
+      <div class="region-name">${r.name}</div>
+      <div class="region-amount">${r.amount}</div>
+      <div class="region-deals">${r.deals}</div>
+      <div class="region-countries">${r.countries.map(c => `<span class="region-country">${c}</span>`).join('')}</div>
+    `;
+    grid.appendChild(card);
+  });
+}
+renderRegions();
+
+// INVESTORS
+function renderInvestors() {
+  const grid = document.getElementById('investorGrid');
+  investors.forEach(inv => {
+    const card = document.createElement('div');
+    card.className = 'investor-card';
+    card.innerHTML = `
+      <div class="investor-rank"># ${inv.rank} · ${inv.badge}</div>
+      <div class="investor-name">${inv.name}</div>
+      <div class="investor-type">${inv.type}</div>
+      <div class="investor-deals">${inv.deals.map(d => `<span class="deal-chip">${d}</span>`).join('')}</div>
+    `;
+    grid.appendChild(card);
+  });
+}
+renderInvestors();
+</script>
+</body>
+</html>
